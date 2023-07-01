@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resources/reset.css" />
+    <link rel="stylesheet" href="./resources/free-quote.css" />
+    <script src="./resources/script.js"></script>
+    <title>Mint Auto Exteriors | About Us</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav>
+      <img
+        src="./resources/Images/Just Mint Logo.png"
+        alt="Mint Auto Exteriors Logo"
+      />
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="free-quote.html">Free Quote!</a></li>
+      </ul>
+    </nav>
+
+    <!-- Form Section -->
+    <div class="form-section">
+      <h1>Contact Us</h1>
+      <form action="submit.php" method="POST">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="John Smith"
+          required
+          class="required"
+          onkeyup="enableSubmit()"
+        />
+        <br />
+        <label for="tel">Phone:</label>
+        <input
+          type="tel"
+          id="tel"
+          name="tel"
+          placeholder="(555) 555-5555"
+          required
+          class="required"
+          onkeyup="enableSubmit()"
+        />
+        <br />
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your message here"
+          required
+          class="required"
+          onkeyup="enableSubmit()"
+          
+        ></textarea>
+        <br />
+        <input type="submit" value="Submit" onclick="onClick()" disabled />
+      </form>
+    </div>
+
+    <!-- Image Section -->
+    <section class="image-section">
+      <img src="./resources/Images/wheels-off.jpg" alt="wheels off detail" />
+      <p class="description">
+        Mint Auto exteriors offers elite wheels-off detailing in order to reach
+        every nook and cranny to get your vehicle to it's finest self.
+      </p>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+      <p>Mint Auto Exteriors</p>
+      <p>Devin McEwan</p>
+      <p>June 28th, 2023</p>
+    </footer>
+  </body>
+</html>
