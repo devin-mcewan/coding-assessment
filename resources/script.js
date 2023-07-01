@@ -32,16 +32,30 @@ const onClickCount3 = () => {
   }
 };
 
-function enableSubmit() {
-  let inputs = document.getElementsByClassName("required"); // Enter your class name for a required field, this should also be reflected within your form fields.
-  let btn = document.querySelector('input[type="submit"]');
-  let isValid = true;
-  for (var i = 0; i < inputs.length; i++) {
-    let changedInput = inputs[i];
-    if (changedInput.value.trim() === "" || changedInput.value === null) {
-      isValid = false;
-      break;
+// Below Function Executes On Form Submit
+function validationEvent() {
+  // Storing Field Values In Variables
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  // Regular Expression For Email
+  var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
+  // Conditions
+  if (name != "" && email != "" && message != "") {
+    if (email.match(emailReg)) {
+      if (message.length == 0) {
+        alert("All type of validation has done on OnSubmit event.");
+        return true;
+      } else {
+        alert("The Message Box must be at least 1 character!");
+        return false;
+      }
+    } else {
+      alert("Invalid Email Address...!!!");
+      return false;
     }
+  } else {
+    alert("All fields are required.....!");
+    return false;
   }
-  btn.disabled = !isValid;
 }

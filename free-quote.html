@@ -25,7 +25,7 @@
     <!-- Form Section -->
     <div class="form-section">
       <h1>Contact Us</h1>
-      <form action="submit.php" method="POST">
+      <form action="submit.php" method="POST" onsubmit="validationEvent()">
         <label for="name">Name:</label>
         <input
           type="text"
@@ -33,19 +33,18 @@
           name="name"
           placeholder="John Smith"
           required
+          p
           class="required"
-          onkeyup="enableSubmit()"
         />
         <br />
-        <label for="tel">Phone:</label>
+        <label for="email">Email:</label>
         <input
-          type="tel"
-          id="tel"
-          name="tel"
-          placeholder="(555) 555-5555"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@example.com"
           required
           class="required"
-          onkeyup="enableSubmit()"
         />
         <br />
         <label for="message">Message:</label>
@@ -55,11 +54,9 @@
           placeholder="Your message here"
           required
           class="required"
-          onkeyup="enableSubmit()"
-          
         ></textarea>
         <br />
-        <input type="submit" value="Submit" onclick="onClick()" disabled />
+        <input type="submit" value="Submit" onclick="onClick()" />
       </form>
     </div>
 
